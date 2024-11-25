@@ -10,8 +10,6 @@ const navigate = useNavigate()
             <a href="about">About</a>
             <a href="blog">Blog</a>
             <a href="contact">Contact</a>
-            <button onClick={()=>navigate("/")}>go Home</button>
-
         </div>
     )
 }
