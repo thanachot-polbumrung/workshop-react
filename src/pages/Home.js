@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 // import "./h.css";
 
-function Home() {
+function Home( {login} ) {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [text, setText] = useState("");
+  let location = useLocation();
 
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   useEffect(() => {
@@ -40,6 +42,8 @@ function Home() {
 
   return (
     <div style={{ padding: 20 }}>
+        <button onClick={login}>login</button>
+      {/* {location.state} */}
       <input onChange={(e) => setText(e.target.value)} />
       <div>{text}</div>
       {loading ? (

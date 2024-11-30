@@ -2,6 +2,7 @@
 import './App.css';
 
 import Rou from './Rou';
+import Test from './Test';
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       {/* <Card/> */}
       
       
-      <Rou/>
+      {/* <Rou/> */}
+      <Test/>
 
     </>
   );
